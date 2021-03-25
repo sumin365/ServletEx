@@ -9,7 +9,55 @@
  <h3>Static HTML Page</h3>
  <p>이것은 정적  HTML로 작성된 페이지 입니다.</p>
  
- <!-- a태그: 페이지 링크 -->
- <a href="hello.jsp?name=Servlet">JSP호출(GET 방식)</a>
+  <!-- a태그: 그림 삽입  -->
+   <!--src:이미지 위치 ,  alt: 대체 텍스트 -->
+  <img src= "images/01.jpg" 
+        width=270
+        height=240
+        alt="프로필" />
+        
+        
+ <h3>요청 처리 연습</h3>
+	<p>
+		<!-- a태그 : 페이지 링크 -->
+		<a href="hello.jsp?name=Servlet">JSP 호출(GET 방식)</a>
+	</p>
+	<p>
+		<a href="hs?name=Servlet">Servlet 호출(GET 방식)</a>
+	</p>
+	
+	
+ <!-- 55p/123 -->	
+	<h3>POST 전송 연습</h3>  
+	<!-- action : 요청을 처리할 url 주소를  HelloServelt로 전송을 할것이다.  HelloServlet은    url-pattern="/hs"  에 반응하고 있다. 
+		method : 요청 전송 방식(GET, POST) -->
+	<form action="hs"
+		method="POST">  <!-- post형식으로 전송된다.HelloServlet에서  override하다-->	
+		<label for="last_name">성(Family Name)</label>
+		<input type="text" id="last_name" name="last_name">
+		<br/>                                                 <!--개행하겠다. 줄띄우겠다.-->
+		<label for="first_name">이름(First Name)</label>
+		<input type="text" id="first_name" name="first_name">
+		<br/>
+		                                                     <!-- input 태그에 있는 name 속성으로 데이터가 전송 -->
+		<input type="submit" value="전송" />                  <!-- 누르면 본 폼이 전송된다 -->
+	</form> 
+	
+	
+<!-- table.html보기 표만들기 연습 -->	
+	<h3>테이블 연습</h3>
+	<p>
+		<a href="table.html">테이블 연습</a>
+	</p>
+	
+	
+	
+	
+<!-- 58p/123 LifecycleServlet-->
+<h3>라이프사이클 확인</h3>
+	<p>
+		<a href="life">라이프사이클 로그 확인</a>
+	</p>
 </body>
 </html>
+
