@@ -3,6 +3,8 @@ package com.bit.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,11 +38,11 @@ public class LifecycleServlet extends HttpServlet {
 //<!-- 61p/123  -->		
 //컨텍스트 파라미터 불러오기
 			//	1. 웹 앱의 컨텍스트 확보
-			ServletContext context = getServletContext();
-			String dburl = context.getInitParameter("dburl");
-			String dbuser = context.getInitParameter("dbuser");
-			String dbpass = context.getInitParameter("dbpass");
-			
+		ServletContext context = getServletContext();
+		String dburl = context.getInitParameter("dburl");
+		String dbuser = context.getInitParameter("dbuser");
+		String dbpass = context.getInitParameter("dbpass");
+		
 //	서블릿 초기화 파라미터
 			//	먼저 서블릿 설정 받아오기
 			ServletConfig config = getServletConfig();
